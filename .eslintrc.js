@@ -17,12 +17,27 @@ module.exports = {
     '@typescript-eslint/no-shadow': ['error'],
     'no-shadow': 'off',
     'no-undef': 'off',
+    'arrow-body-style': ['error', 'always'],
     'prettier/prettier': [
       'error',
       {
         endOfLine: 'auto',
       },
     ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+        mjs: 'never',
+      },
+    ],
     'react/jsx-filename-extension': [1, {extensions: ['.js', '.jsx', '.tsx']}],
+  },
+  settings: {
+    'import/resolver': {node: {extensions: ['.js', '.jsx', '.ts', '.tsx']}},
   },
 };
